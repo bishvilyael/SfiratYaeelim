@@ -140,8 +140,26 @@
       setPct(selected, v);
     }, { passive:false });
   </script>
+  <script>
+  (function () {
+    const cleanUrl = "https://script.google.com/macros/s/AKfycbysN163oJgKTNwIeiPKTBrGyttUXUhPQglAucX0hrtlk9Va2GG8RoETbWEwCN6a7EzJ6Q/exec";
+
+    const l1 = document.getElementById("L1");
+    if (!l1) return;
+
+    l1.addEventListener("click", function (e) {
+      e.preventDefault();
+      // פותח את ה-URL הנקי בלי fbclid
+      window.location.href = cleanUrl;
+      // אם אתה רוצה חלון חדש:
+      // window.open(cleanUrl, "_blank");
+    });
+  })();
+</script>
+
 </body>
 </html>
+
 
 
 
